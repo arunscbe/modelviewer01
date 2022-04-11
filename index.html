@@ -41,17 +41,34 @@ button {
     </model-viewer>
     </body>
     <script>
-        function change(data){
-            const modelViewer = document.querySelector("model-viewer#reveal");
-             console.log(modelViewer.model.materials[1]);
-            modelViewer.model.materials[1].pbrMetallicRoughness[data].setTexture = './assets/download.png';
+           function change(data){
+            const modelViewer = document.querySelector("model-viewer#jucuzzi");
+             const material = modelViewer.model.materials[2];
+
+             let _C = modelViewer.createTexture('./assets/download.png');
+             modelViewer.model.materials[2].pbrMetallicRoughness.setRoughnessFactor(0)
+             console.log(modelViewer.model.materials[2].pbrMetallicRoughness.setBaseColorFactor(1));
+            //  material.pbrMetallicRoughness[data].setTexture(_C);
+
+         //   modelViewer.model.materials[2].pbrMetallicRoughness[data].setTexture ('./assets/download.png');
             // let texture = modelViewerTexture1.createTexture(event.target.value);
-            modelViewer.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
-            modelViewer.addEventListener('load',() => {
+            modelViewer.model.materials[2].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
+            /*modelViewer.addEventListener('load',() => {
                 const names = modelViewer.availableVariants;
                 modelViewer.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
                 console.log(names);
-            });
-        }
+            })
+//         function change(data){
+//             const modelViewer = document.querySelector("model-viewer#reveal");
+//              console.log(modelViewer.model.materials[1]);
+//             modelViewer.model.materials[1].pbrMetallicRoughness[data].setTexture = './assets/download.png';
+//             // let texture = modelViewerTexture1.createTexture(event.target.value);
+//             modelViewer.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
+//             modelViewer.addEventListener('load',() => {
+//                 const names = modelViewer.availableVariants;
+//                 modelViewer.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
+//                 console.log(names);
+//             });
+//         }
     </script>
 </html>
