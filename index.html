@@ -40,17 +40,17 @@ button {
     </model-viewer>
     </body>
     <script>
-//         function change(data){
-//             const modelViewer = document.querySelector("model-viewer#reveal");
-//              console.log(modelViewer.model.materials[1]);
-//             modelViewer.model.materials[1].pbrMetallicRoughness[data].setTexture = './assets/download.png';
-//             // let texture = modelViewerTexture1.createTexture(event.target.value);
-//             modelViewer.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
-//             modelViewer.addEventListener('load',() => {
-//                 const names = modelViewer.availableVariants;
-//                 modelViewer.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
-//                 console.log(names);
-//             });
-//         }
+        function change(data){
+            const modelViewer = document.querySelector("model-viewer#reveal");
+             console.log(modelViewer.model.materials[1]);
+            modelViewer.model.materials[1].pbrMetallicRoughness[data].setTexture = './assets/download.png';
+            // let texture = modelViewerTexture1.createTexture(event.target.value);
+            modelViewer.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
+            modelViewer.addEventListener('load',() => {
+                const names = modelViewer.availableVariants;
+                modelViewer.model.materials[0].pbrMetallicRoughness.setBaseColorFactor([0,1,0,1])
+                console.log(names);
+            });
+        }
     </script>
 </html>
